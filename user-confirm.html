@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Account Login Confirmation</title>
+   <link href="//fonts.googleapis.com/css2?family=Abril+Fatface:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+   <link href="//fonts.googleapis.com/css2?family=Aclonica:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="http://localhost/WEB/newlogo.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f2f2f2;
+      background-image:linear-gradient(to right, #108dc7 0%, #ef8e38 100%);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%; /* Make the background image fill the body */
+    }
+
+    header {
+      margin-bottom: 30px;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      background-clip:text;
+    }
+
+    .app-logo {
+      max-width: 200px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color:#010023;
+      background-clip:text;
+      animation: pulse 2s infinite;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #074380;
+      
+    }
+
+    div {
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #010511;
+      animation: pulse 2s infinite;
+    }
+
+    li strong {
+      font-weight: bold;
+      margin-right: 5px;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: #f5f3f2e5;
+    }
+
+    .create-inventory-button,
+    .view-inventory-button,
+    .create-sales-button,
+    .create-stocks-button,
+    .create-stock-button {
+      display: inline-block;
+      background-color: #04376d;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin: 10px;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="app-logo" src="http:\\localhost\WEB\logonew.jpg" alt="Sales Pilot Logo">
+    <h1>LOGIN SUCCESS</h1>
+  </header>
+
+  <h2></h2>
+
+  <div>
+    <ul>
+      <li><strong>***WELCOME SALES PILOT***</li>
+    </ul>
+  </div>
+
+
+  <!-- Buttons for Creating Sales, Stocks, and Stock -->
+  <div>
+     
+    <!-- Link the "Create Sales" button to create-sales.html -->
+    <a class="view-inventory-button" href="inventory-dashboard.php">PROCEED</a>
+    
+  </div>
+  </div>
+
+  <script>
+    // JavaScript code to retrieve username and email from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const Username = urlParams.get('Username');
+    const Product = urlParams.get('Product');
+
+    // Update the content of the page with the username and email
+    document.getElementById('Username').textContent = Username;
+    document.getElementById('Product').textContent = Product;
+
+    // Function to start the animation
+    function startAnimation() {
+      const button = document.querySelector('.start-button');
+      button.style.animation = 'none';
+      void button.offsetWidth; // Trigger reflow to restart the animation
+      button.style.animation = 'pulse 2s infinite';
+    }
+  </script>
+</body>
+</html>

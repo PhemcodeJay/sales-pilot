@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="http://localhost/WEB/newlogo.png">
+  <title>REGISTRATION SUCCESS!!!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0; /* Remove default body margin */
+      padding: 0; /* Remove default body padding */
+      background-color: #f5f3ee;
+      background-image:linear-gradient(to right, #3e5151 0%, #decba4 100%);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; /* Make the background image cover the entire body */
+      height: 100vh; /* Set the body height to fill the entire viewport */
+    }
+
+    header {
+      margin-bottom: 30px;
+      background-color: transparent;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .app-logo {
+      max-width: 200px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #050505;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #01080f;
+    }
+
+    div {
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+      color: #f0ecea;
+      background-color: #070707dc;
+      animation: pulse 2s infinite;
+    }
+
+    li strong {
+      font-weight: bold;
+      margin-right: 5px;
+      font-size: 2rem;
+      animation: pulse 2s infinite;
+    }
+
+    span {
+      color: #f5f3f2e5;
+    }
+
+    .login-button {
+      display: inline-block;
+      background-color: #b45609;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: #070707dc;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+</style>
+</head>
+<body>
+  <header>
+    <img class="app-logo" src="http:\\localhost\WEB\logonew.jpg" alt="Sales Pilot Logo">
+    <h1>Registration Successful</h1> 
+  </header>
+  <h2></h2>
+  <div>
+    <ul>
+      <li><strong>WELCOME TO SALES PILOT!</li>
+        <p>Your account has been created successfully.</p>
+        <p>Please check your email to activate your account.</p>
+    </ul>
+  </div>
+
+  <!-- Link the "Create Inventory" button to create-inventory.html -->
+  <a class="login-button" href="loginpage.php">LOGIN</a>
+  </div>
+  </div>
+
+  <script>
+    // JavaScript code to retrieve username and email from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    const email = urlParams.get('email');
+
+    // Update the content of the page with the username and email
+    document.getElementById('username').textContent = username;
+    document.getElementById('email').textContent = email;
+
+    // Function to start the animation
+    function startAnimation() {
+      const button = document.querySelector('.start-button');
+      button.style.animation = 'none';
+      void button.offsetWidth; // Trigger reflow to restart the animation
+      button.style.animation = 'pulse 2s infinite';
+    }
+  </script>
+</body>
+</html>
